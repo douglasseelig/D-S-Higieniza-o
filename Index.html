@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="D&S Higienização — higienização profissional de estofados e estética automotiva. Atendimento em Porto Alegre.">
+<meta name="theme-color" content="#0b8f45">
+<title>D&S Higienização | Limpeza que transforma</title>
+<style>
+:root{
+  --green:#0b8f45;--green2:#087338;--mint:#eaf8f0;--dark:#08160f;
+  --text:#142019;--muted:#6a766f;--white:#fff;--line:#e3ebe6;
+  --shadow:0 18px 55px rgba(5,35,20,.12);--radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--dark);color:#dce8e0;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;padding:8px 0}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(227,235,230,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:950;font-size:22px}
+.logo-mark{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--green),#45c878);display:grid;place-items:center;color:#fff;font-weight:950}
+.logo span{color:var(--green)}
+nav ul{display:flex;list-style:none;gap:27px;font-weight:750;font-size:14px}
+nav a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--green);background:var(--green);color:#fff;padding:13px 20px;border-radius:13px;font-weight:850;transition:.2s;cursor:pointer}
+.btn:hover{background:var(--green2);border-color:var(--green2);transform:translateY(-2px)}
+.btn.light{background:#fff;color:var(--green)}
+.btn.dark{background:var(--dark);border-color:var(--dark)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 15%,#dff7e8 0,transparent 28%),linear-gradient(135deg,#f2fbf5,#fff 62%);padding:88px 0 75px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#dcf5e5;color:var(--green2);padding:8px 13px;border-radius:999px;font-size:13px;font-weight:900;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-2.8px;max-width:720px}
+h1 em{font-style:normal;color:var(--green)}
+.hero-copy{font-size:18px;color:var(--muted);max-width:650px;margin:22px 0 28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:25px;flex-wrap:wrap;margin-top:28px;color:#4f5d55;font-size:13px;font-weight:750}
+.trust span{display:flex;align-items:center;gap:7px}
+.visual{position:relative}
+.main-photo{height:470px;border-radius:34px;background:
+linear-gradient(150deg,rgba(7,35,20,.15),rgba(7,35,20,.5)),
+url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85') center/cover;
+box-shadow:var(--shadow);overflow:hidden}
+.badge{position:absolute;left:-22px;bottom:28px;background:#fff;border-radius:18px;padding:17px 19px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+.badge strong{font-size:20px;display:block}
+.badge small{color:var(--muted)}
+.float-card{position:absolute;right:-18px;top:25px;background:var(--dark);color:#fff;padding:17px 20px;border-radius:18px;box-shadow:var(--shadow)}
+.float-card b{font-size:25px;color:#7ff0a8}
+section{padding:90px 0}
+.section-head{text-align:center;max-width:760px;margin:0 auto 48px}
+.section-head .label{color:var(--green);font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}
+.section-head h2{font-size:clamp(30px,4vw,45px);line-height:1.08;letter-spacing:-1px;margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.stats{padding:25px 0;background:var(--dark);color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.stat{text-align:center;padding:15px;border-right:1px solid rgba(255,255,255,.12)}
+.stat:last-child{border:0}.stat b{display:block;font-size:27px;color:#86f0ad}.stat span{font-size:12px;color:#b6c5bc}
+.services{background:#f6f9f7}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.04);transition:.2s}
+.service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.service-img{height:175px;background-size:cover;background-position:center}
+.service-body{padding:22px}
+.service-body .num{font-size:12px;color:var(--green);font-weight:900}
+.service h3{font-size:19px;margin:5px 0}
+.service p{color:var(--muted);font-size:14px}
+.service a{display:inline-block;color:var(--green);font-weight:850;font-size:13px;margin-top:13px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.feature-img{min-height:470px;border-radius:30px;background:url('https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1000&q=85') center/cover;box-shadow:var(--shadow)}
+.checks{list-style:none;display:grid;gap:14px;margin:25px 0}
+.checks li{display:flex;gap:11px;align-items:flex-start}
+.check{flex:none;width:27px;height:27px;border-radius:50%;background:#def5e7;color:var(--green);display:grid;place-items:center;font-weight:950}
+.feature h2{font-size:clamp(31px,4vw,46px);line-height:1.08;letter-spacing:-1.5px}
+.feature p{color:var(--muted);margin-top:14px}
+.promo{background:linear-gradient(120deg,var(--green2),var(--green));color:#fff}
+.promo-box{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}
+.promo h2{font-size:clamp(30px,4vw,44px);line-height:1.05}
+.promo p{color:#d8f4e1;margin-top:10px}
+.price-box{text-align:center;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.18);padding:24px 28px;border-radius:22px}
+.price-box small{display:block;color:#d5f4df}.price{font-size:42px;font-weight:950}.price-box .btn{margin-top:10px}
+.gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-template-rows:220px 220px;gap:14px}
+.g{border-radius:20px;background-size:cover;background-position:center;overflow:hidden;position:relative}
+.g:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.45))}
+.g1{grid-row:1/3;background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85')}
+.g2{background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=85')}
+.g3{background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=85')}
+.g4{background-image:url('https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=700&q=85')}
+.g5{background-image:url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=700&q=85')}
+.testimonials{background:#f6f9f7}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.test{background:#fff;border:1px solid var(--line);padding:27px;border-radius:22px}
+.stars{color:#f3b400;letter-spacing:2px}.test p{margin:15px 0;color:#56645c}.author{font-weight:850;font-size:14px}
+.cta{padding:90px 0}
+.cta-box{background:var(--dark);color:#fff;border-radius:30px;padding:55px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}
+.cta-box h2{font-size:clamp(30px,4vw,45px);line-height:1.08}
+.cta-box p{color:#b9c9c0;margin-top:10px}
+.contact{background:#f6f9f7}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
+.contact-info{padding:20px 0}.contact-info h3{font-size:25px;margin-bottom:10px}.contact-info p{color:var(--muted);margin-bottom:20px}
+.info-item{display:flex;gap:14px;margin:17px 0}.info-icon{width:43px;height:43px;border-radius:13px;background:#dff5e7;display:grid;place-items:center}.info-item strong{display:block}.info-item span{color:var(--muted);font-size:14px}
+.form{background:#fff;padding:30px;border-radius:24px;border:1px solid var(--line);box-shadow:0 10px 35px rgba(0,0,0,.05)}
+.form h3{font-size:24px;margin-bottom:20px}
+.field{margin-bottom:14px}.field label{font-size:13px;font-weight:800;display:block;margin-bottom:6px}
+.field input,.field textarea{width:100%;padding:13px 14px;border:1px solid #dbe5de;border-radius:12px;outline:none}
+.field input:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #e4f6eb}
+.field textarea{min-height:105px;resize:vertical}
+footer{background:#06110b;color:#dce8e0;padding:40px 0}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer small{color:#8fa198}
+.float-wa{position:fixed;right:22px;bottom:22px;width:61px;height:61px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:29px;z-index:60;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.mobile-menu{display:none}
+@media(max-width:950px){
+ nav ul{display:none}.service-grid{grid-template-columns:repeat(2,1fr)}
+ .hero-grid,.feature,.contact-grid{grid-template-columns:1fr}
+ .hero{padding-top:60px}.main-photo{height:390px}
+ .stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border:0}
+ .promo-box,.cta-box{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ .topbar .container{justify-content:center;text-align:center}.topbar .container span:first-child{display:none}
+ .nav{height:68px}.nav>.btn{padding:10px 13px;font-size:13px}.logo{font-size:19px}
+ .logo-mark{width:34px;height:34px}
+ h1{letter-spacing:-1.8px}.hero-copy{font-size:16px}
+ .trust{gap:12px}.trust span{font-size:12px}
+ .service-grid,.test-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}
+ .stat{border:0!important}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px}
+ .g1{grid-row:auto;grid-column:1/3}.g2,.g3,.g4,.g5{display:none}
+ .feature-img{min-height:330px}.cta-box,.promo-box{padding:32px}
+ section{padding:65px 0}.section-head{margin-bottom:34px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Atendimento em Porto Alegre e região</span>
+    <span>🌱 Limpeza com foco em sustentabilidade e economia de água</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio"><div class="logo-mark">D&S</div><div>D&S <span>Higienização</span></div></a>
+    <nav>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="https://wa.me/5551990137938?text=Olá!%20Vim%20pelo%20site%20da%20D%26S%20Higienização%20e%20quero%20um%20orçamento." target="_blank">Orçamento grátis</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">✦ HIGIENIZAÇÃO PROFISSIONAL</div>
+      <h1>Limpeza que você <em>vê.</em> Cuidado que você <em>sente.</em></h1>
+      <p class="hero-copy">Deixe sofás, colchões e o interior do seu carro renovados. A D&S combina técnicas profissionais, produtos específicos e uma proposta mais consciente.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/5551990137938?text=Olá!%20Quero%20fazer%20um%20orçamento." target="_blank">📲 Pedir orçamento</a>
+        <a class="btn light" href="#servicos">Ver serviços →</a>
+      </div>
+      <div class="trust">
+        <span>✓ Atendimento personalizado</span>
+        <span>✓ Produtos específicos</span>
+        <span>✓ Foco sustentável</span>
+      </div>
+    </div>
+    <div class="visual">
+      <div class="main-photo"></div>
+      <div class="float-card"><small>Economia de água*</small><br><b>até 300 L</b></div>
+      <div class="badge"><div style="font-size:27px">🌱</div><div><strong>Mais consciente</strong><small>para você e para o ambiente</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><b>4+</b><span>categorias de serviços</span></div>
+    <div class="stat"><b>99,9%</b><span>remoção bacteriana* em processos específicos</span></div>
+    <div class="stat"><b>R$ 190</b><span>sofá até 3 lugares</span></div>
+    <div class="stat"><b>POA</b><span>atendimento em Porto Alegre</span></div>
+  </div>
+</div>
+
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <div class="label">O que fazemos</div>
+      <h2>Serviços para deixar tudo como novo</h2>
+      <p>Escolha o serviço e fale conosco para receber uma avaliação personalizada.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=85')"></div>
+        <div class="service-body"><span class="num">01 — RESIDENCIAL</span><h3>Sofás e estofados</h3><p>Higienização, extração e cuidados conforme o tecido.</p><a href="https://wa.me/5551990137938?text=Olá!%20Quero%20orçamento%20para%20higienização%20de%20sofá." target="_blank">Solicitar orçamento →</a></div>
+      </article>
+      <article class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=700&q=85')"></div>
+        <div class="service-body"><span class="num">02 — RESIDENCIAL</span><h3>Colchões</h3><p>Limpeza profissional para conservação e renovação.</p><a href="https://wa.me/5551990137938?text=Olá!%20Quero%20orçamento%20para%20higienização%20de%20colchão." target="_blank">Solicitar orçamento →</a></div>
+      </article>
+      <article class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=700&q=85')"></div>
+        <div class="service-body"><span class="num">03 — AUTOMOTIVO</span><h3>Higienização interna</h3><p>Bancos, carpetes, plásticos e áreas internas.</p><a href="https://wa.me/5551990137938?text=Olá!%20Quero%20orçamento%20para%20higienização%20automotiva." target="_blank">Solicitar orçamento →</a></div>
+      </article>
+      <article class="service">
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=85')"></div>
+        <div class="service-body"><span class="num">04 — AUTOMOTIVO</span><h3>Estética automotiva</h3><p>Lavagem ecológica, pintura e acabamento.</p><a href="https://wa.me/5551990137938?text=Olá!%20Quero%20orçamento%20para%20estética%20automotiva." target="_blank">Solicitar orçamento →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="container feature">
+    <div class="feature-img"></div>
+    <div>
+      <div class="section-head" style="text-align:left;margin:0">
+        <div class="label">Nosso diferencial</div>
+        <h2>Não é só limpar. É cuidar do que é seu.</h2>
+        <p>Nosso trabalho é pensado para cada superfície, buscando um resultado eficiente sem descuidar do material.</p>
+      </div>
+      <ul class="checks">
+        <li><span class="check">✓</span><div><strong>Produtos específicos</strong><br><span style="color:var(--muted)">Produtos adequados para a área têxtil e cada tipo de superfície.</span></div></li>
+        <li><span class="check">✓</span><div><strong>Processo profissional</strong><br><span style="color:var(--muted)">Escovação e extração quando indicadas para o serviço.</span></div></li>
+        <li><span class="check">✓</span><div><strong>Mais consciência</strong><br><span style="color:var(--muted)">Métodos que priorizam economia de água e uso responsável.</span></div></li>
+        <li><span class="check">✓</span><div><strong>Avaliação personalizada</strong><br><span style="color:var(--muted)">Cada material e nível de sujeira pode exigir um tratamento diferente.</span></div></li>
+      </ul>
+      <a class="btn" href="https://wa.me/5551990137938?text=Olá!%20Quero%20uma%20avaliação%20do%20meu%20serviço." target="_blank">Falar com a D&S</a>
+    </div>
+  </div>
+</section>
+
+<section class="promo">
+  <div class="container promo-box">
+    <div><div class="eyebrow" style="background:rgba(255,255,255,.13);color:#fff">OFERTA ESPECIAL</div><h2>Sofá até 3 lugares<br>por R$ 190</h2><p>Higienização profissional. Consulte condições e disponibilidade para o seu endereço.</p></div>
+    <div class="price-box"><small>A partir de</small><div class="price">R$ 190</div><a class="btn light" href="https://wa.me/5551990137938?text=Olá!%20Quero%20aproveitar%20a%20oferta%20do%20sofá%20de%20até%203%20lugares." target="_blank">Quero aproveitar</a></div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="container">
+    <div class="section-head"><div class="label">Nosso trabalho</div><h2>Resultado que fala por si</h2><p>Algumas referências visuais para você conhecer o estilo do nosso trabalho.</p></div>
+    <div class="gallery">
+      <div class="g g1"></div><div class="g g2"></div><div class="g g3"></div><div class="g g4"></div><div class="g g5"></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:15px">Imagens ilustrativas. Substitua pelas fotos reais de “antes e depois” da D&S para aumentar a prova social.</p>
+  </div>
+</section>
+
+<section class="testimonials" id="avaliacoes">
+  <div class="container">
+    <div class="section-head"><div class="label">Experiência do cliente</div><h2>O que seus clientes podem encontrar aqui</h2><p>Área preparada para avaliações reais da D&S.</p></div>
+    <div class="test-grid">
+      <article class="test"><div class="stars">★★★★★</div><p>“Espaço reservado para um depoimento real de cliente sobre o atendimento e o resultado da higienização.”</p><div class="author">Cliente D&S</div></article>
+      <article class="test"><div class="stars">★★★★★</div><p>“Aqui você pode destacar uma experiência real, com autorização do cliente, e reforçar a confiança no serviço.”</p><div class="author">Cliente D&S</div></article>
+      <article class="test"><div class="stars">★★★★★</div><p>“Use este espaço para uma avaliação verdadeira sobre limpeza, pontualidade e qualidade do atendimento.”</p><div class="author">Cliente D&S</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div><h2>Seu sofá, colchão ou carro merece esse cuidado.</h2><p>Envie fotos pelo WhatsApp e conte o que você precisa. A D&S avalia o serviço e orienta você.</p></div>
+      <a class="btn" href="https://wa.me/5551990137938?text=Olá!%20Vou%20enviar%20fotos%20para%20fazer%20um%20orçamento." target="_blank">📲 Enviar fotos</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="section-head"><div class="label">Contato</div><h2>Vamos conversar?</h2><p>Preencha o formulário e ele abrirá uma mensagem pronta no WhatsApp.</p></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>D&S Higienização</h3><p>Higienização de estofados e serviços automotivos com atendimento personalizado.</p>
+        <div class="info-item"><div class="info-icon">📍</div><div><strong>Região de atendimento</strong><span>Porto Alegre e região</span></div></div>
+        <div class="info-item"><div class="info-icon">📱</div><div><strong>WhatsApp</strong><span>(51) 99013-7938</span></div></div>
+        <div class="info-item"><div class="info-icon">📸</div><div><strong>Instagram</strong><span>@dshigienizacao_</span></div></div>
+      </div>
+      <form class="form" onsubmit="sendWhatsApp(event)">
+        <h3>Peça seu orçamento</h3>
+        <div class="field"><label>Seu nome</label><input id="nome" required placeholder="Como podemos chamar você?"></div>
+        <div class="field"><label>Serviço</label><input id="servico" required placeholder="Ex.: sofá, colchão, carro..."></div>
+        <div class="field"><label>Mensagem</label><textarea id="mensagem" placeholder="Conte brevemente o que você precisa."></textarea></div>
+        <button class="btn" type="submit" style="width:100%">Enviar pelo WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><strong>D&S Higienização</strong><br><small>Limpeza profissional com cuidado e sustentabilidade.</small></div>
+    <div><small>© 2026 D&S Higienização · Porto Alegre</small></div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/5551990137938?text=Olá!%20Vim%20pelo%20site%20da%20D%26S%20Higienização." target="_blank" aria-label="WhatsApp">✆</a>
+
+<script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  const nome=document.getElementById('nome').value.trim();
+  const servico=document.getElementById('servico').value.trim();
+  const mensagem=document.getElementById('mensagem').value.trim();
+  const text=`Olá! Meu nome é ${nome}. Gostaria de um orçamento para: ${servico}. ${mensagem}`;
+  window.open('https://wa.me/5551990137938?text='+encodeURIComponent(text),'_blank');
+}
+</script>
+</body>
+</html>
